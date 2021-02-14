@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  db:
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: negroni
+    volumes:
+      - data-volume:/var/lib/db
+    ports:
+      - "3306:3306"
+
+volumes:
+  data-volume:
